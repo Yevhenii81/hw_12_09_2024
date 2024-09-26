@@ -33,7 +33,6 @@ namespace Class_Student_hw_25_06_2024
             SetHomeworkRates(homeworkRates);
             SetClassWorkRates(classworkRates);
             SetExamRates(examRates);
-
         }
 
         public void SetName(string name)
@@ -137,20 +136,20 @@ namespace Class_Student_hw_25_06_2024
 
         //вычесление среднего балла
 
-        public void PlusAverageGrade(int number)
-        {
-            this.averageGrade += number;
-        }
+        //public void PlusAverageGrade(int number)
+        //{
+            //this.averageGrade += number;
+        //}
 
-        public int AverageGrade(Student student)
-        {
-            for (int i = 0; i < student.GetExamRates().Count; i++)
-            {
-                int r = student.GetExamRates()[i] / student.GetExamRates().Capacity;
-                student.PlusAverageGrade(r);
-            }
-            return student.GetAverageGrade();
-        }
+        //public int AverageGrade(Student student)
+        //{
+            //for (int i = 0; i < student.GetExamRates().Count; i++)
+            //{
+                //int r = student.GetExamRates()[i] / student.GetExamRates().Capacity;
+                //student.PlusAverageGrade(r);
+            //}
+            //return student.GetAverageGrade();
+        //}
 
         //public void AddHomeworkGrades(Student student, int grade)
         //{
@@ -191,12 +190,10 @@ namespace Class_Student_hw_25_06_2024
                    $"Name: {GetName()}\n" +
                    $"Lastname: {GetLastName()}\n" +
                    $"Birthday: {GetBirthday()}\n" +
-                   //$"Average Grade: {studentManager.AverageGrade(this)}\n" +
                    $"Homework Rates: {string.Join(", ", homeworkRates)}\n" +
                    $"Classwork Rates: {string.Join(", ", classworkRates)}\n" +
                    $"Classwork Rates:  {string.Join(", ", classworkRates)}\n" +
-                    //$"Average Grade: {string.Join (", ", averageGrade)}\n";
-                    $"Average Grade: {CalculateAverageGrade()}\n";
+                   $"Average Grade: {CalculateAverageGrade()}\n";
         }
 
         //overload
